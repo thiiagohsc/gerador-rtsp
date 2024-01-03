@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>GERADOR RTSP</title>
+    <title>URL RTSP Generator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>PREENCHA OS DADOS</h2>
+
+    <h2>PREENCHA OS DADOS ABAIXO</h2>
 
     <form id="rtspForm">
         <label for="usuario">Usuário:</label>
         <input type="text" id="usuario" required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" required>
+        <input type="text" id="senha" required>
 
         <label for="ip">IP:</label>
         <input type="text" id="ip" required>
 
-        <label for="canal">Número do Canal:</label>
-        <input type="number" id="canal" required>
+        <label for="porta">Porta:</label>
+        <input type="text" id="porta" required>
 
-        <label for="substream">Número do Substream:</label>
-        <input type="number" id="substream" required>
+        <label for="canal">Número do Canal Inicial:</label>
+        <input type="text" id="canal" required>
 
-        <button type="button" onclick="gerarURLRTSP()">Gerar URL RTSP</button>
+        <label for="numCanais">Número total de Canais:</label>
+        <input type="text" id="numCanais" required>
+
+        <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
     </form>
 
-    <h2>URL RTSP resultante:</h2>
-    <p id="resultado"></p>
+    <h2>RTSP's GERADOS</h2>
+    <div id="resultados"></div>
 
-    <script src="./script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

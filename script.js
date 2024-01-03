@@ -1,15 +1,22 @@
-function criarURLRTSP(usuario, senha, ip, canal, substream) {
-    let url = `rtsp://${usuario}:${senha}@${ip}:1554/cam/realmonitor?channel=${canal}&subtype=${substream}`;
+function criarURLRTSP(usuario, senha, ip, porta, canal, substream) {
+    var url = `rtsp://${usuario}:${senha}@${ip}:${porta}/cam/realmonitor?channel=${canal}&subtype=${substream}`;
     return url;
 }
 
-function gerarURLRTSP() {
-    let usuario = document.getElementById('usuario').value;
-    let senha = document.getElementById('senha').value;
-    let ip = document.getElementById('ip').value;
-    let canal = document.getElementById('canal').value;
-    let substream = document.getElementById('substream').value;
+function gerarURLsRTSP() {
+    var usuario = document.getElementById('usuario').value;
+    var senha = document.getElementById('senha').value;
+    var ip = document.getElementById('ip').value;
+    var porta = document.getElementById('porta').value;
+    var canalInicial = parseInt(document.getElementById('canal').value, 10);
+    var numCanais = parseInt(document.getElementById('numCanais').value, 10);
 
-    let urlRTSP = criarURLRTSP(usuario, senha, ip, canal, substream);
-    document.getElementById('resultado').textContent = urlRTSP;
+    var resultadosDiv = document.getElementById('resultados');
+    resultadosDiv.innerHTML = '';
+
+    for (var i = 0; i < numCanais; i++) {
+        var canal = canalInicial + i;
+        var urlRTSP = criarURLRTSP(usuario, senha, ip, porta, canal, 1);
+        resultadosDiv.innerHTML += `<p>${urlRTSP}</p>`;
+    }
 }
