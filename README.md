@@ -1,6 +1,6 @@
 # Gerador RTSP em JavaScript
 
-Este repositório contém um projeto de gerador de URLs RTSP para streaming de vídeo. O projeto é escrito em JavaScript e é executado em um servidor web.
+Este repositório contém um projeto de gerador de URLs RTSP para streaming de vídeo.
 
 ## Como usar
 
@@ -18,6 +18,8 @@ Para usar o gerador RTSP, siga estas etapas:
 
 3. Após fornecer as informações necessárias, clique no botão "Gerar RTSP".
 4. As URLs RTSP geradas serão exibidas na página.
+
+Observação: Nenhum dado inserindo é armazenado para uso de terceiros.
 
 ## Contribuição
 
