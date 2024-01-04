@@ -1,4 +1,4 @@
-# Gerador RTSP em JavaScript
+# Gerador RTSP
 
 Este repositório contém um projeto de gerador de URLs RTSP para streaming de vídeo.
 
