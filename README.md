@@ -19,7 +19,7 @@ Para usar o gerador RTSP, siga estas etapas:
 3. Após fornecer as informações necessárias, clique no botão "Gerar RTSP".
 4. As URLs RTSP geradas serão exibidas na página.
 
-Observação: Nenhum dado inserindo é armazenado para uso de terceiros.
+Observação: Nenhum dado inserido é armazenado para uso de terceiros.
 
 ## Contribuição
 
