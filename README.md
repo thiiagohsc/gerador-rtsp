@@ -6,7 +6,7 @@ Este repositório contém um projeto de gerador de URLs RTSP para streaming de v
 
 Para usar o gerador RTSP, siga estas etapas:
 
-1. Acesse o projeto <a href="https://thiiagohsc.github.io/gerador-rtsp/">clicando aqui</a>
+1. Acesse o projeto <a href="https://gerador-rtsp.vercel.app/">clicando aqui</a>
 2. Insira as informações necessárias:
 
     * Nome de usuário
