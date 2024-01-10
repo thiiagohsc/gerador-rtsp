@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERADOR RTSP - INTELBRAS</title>
+    <link rel="stylesheet" href="/css/result.css">
+</head>
+<body>
+
+    <h2>PREENCHA OS DADOS ABAIXO</h2>
+
+    <form id="rtspForm">
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" required>
+
+        <label for="senha">Senha:</label>
+        <input type="text" id="senha" required>
+
+        <label for="ip">IP:</label>
+        <input type="text" id="ip" required>
+
+        <label for="porta">Porta:</label>
+        <input type="text" id="porta" required>
+
+        <label for="canal">Número do Canal Inicial:</label>
+        <input type="text" id="canal" required>
+
+        <label for="numCanais">Número total de Canais:</label>
+        <input type="text" id="numCanais" required>
+
+        <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+    </form>
+
+    <h2>RTSP's GERADOS</h2>
+    <div id="resultados"></div>
+
+    <script src="/js/intelbras.js"></script>
+</body>
+</html>
