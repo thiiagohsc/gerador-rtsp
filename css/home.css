@@ -19,13 +19,17 @@ body {
     padding: 20px;
 }
 
+.logo:hover {
+    background-color: #1b263b;
+}
+
 .intelbras{
     width: 500px;
     height: 100px;
 }
 
 .intelbras, .hikvision{
-    border: 3px solid rgb(137, 146, 5);
+    border: 3px solid rgb(162, 155, 165);
     margin-top: 30px;
     border-radius: 20px;
 } 
