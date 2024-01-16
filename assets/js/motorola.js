@@ -11,7 +11,7 @@ function gerarURLsRTSP() {
     let canalInicial = parseInt(document.getElementById('canal').value, 10);
     let numCanais = parseInt(document.getElementById('numCanais').value, 10);
 
-    var resultadosDiv = document.getElementById('resultados');
+    let resultadosDiv = document.getElementById('resultados');
     resultadosDiv.innerHTML = '';
 
     for (let i = 0; i < numCanais; i++) {
