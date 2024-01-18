@@ -1,5 +1,5 @@
 function criarURLRTSP(usuario, senha, ip, porta, canal, substream) {
-    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/?chID=${canal}&streamType=main`;
+    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/profile${canal}`;
     return url;
 }
 

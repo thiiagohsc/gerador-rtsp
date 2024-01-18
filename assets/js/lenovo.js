@@ -1,5 +1,5 @@
 function criarURLRTSP(usuario, senha, ip, porta, canal) {
-    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/channels/${canal}/mpegts`;
+    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/live/ch00_${canal}`;
     return url;
 }
 

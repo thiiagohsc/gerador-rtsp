@@ -35,15 +35,8 @@ body {
     background-color: #1b263b;
 }
 
-.hikvision {
+.hikvision, .motorola, .lenovo, .intelbras {
     height: 85px;
 }
 
-.motorola{
-    height: 110px;
-}
-
-.lenovo {
-    height: 110px;
-}
 
