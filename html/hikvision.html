@@ -7,36 +7,71 @@
     <link rel="stylesheet" href="/assets/css/result.css">
 </head>
 <body>
-    <div class="header">
-        <a href="/index.html"><img src="/assets/images/icon-back.png" class="icon-home"></a>
-        <h2>PREENCHA OS DADOS ABAIXO</h2>
+    <a href="/index.html"><img src="/assets/images/icon-back.png" class="icon-home"></a>
+    <div class="flex">
+        <div class="container-rtsp">
+            <div class="header">
+                <h2>PREENCHA OS DADOS DA CÂMERA</h2>
+            </div>
+
+            <form id="rtspForm">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" required>
+
+                <label for="ip">IP:</label>
+                <input type="text" id="ip" required>
+
+                <label for="porta">Porta:</label>
+                <input type="text" id="porta" required>
+
+                <label for="canal">Número do Canal Inicial:</label>
+                <input type="text" id="canal" required>
+
+                <label for="numCanais">Número total de Canais:</label>
+                <input type="text" id="numCanais" required>
+
+                <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+            </form>
+
+            <h2>RTSP's GERADOS</h2>
+            <div id="resultados"></div>
+        </div>
+
+        <div class="container-cam">
+            <div class="header">
+            <h2>PREENCHA OS DA CÂMERA</h2>
+            </div>
+
+            <form id="camForm">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" required>
+
+                <label for="ip">IP:</label>
+                <input type="text" id="ip" required>
+
+                <label for="porta">Porta:</label>
+                <input type="text" id="porta" required>
+
+                <label for="canal">Número do Canal Inicial:</label>
+                <input type="text" id="canal" required>
+
+                <label for="numCanais">Número total de Canais:</label>
+                <input type="text" id="numCanais" required>
+
+                <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+            </form>
+
+            <h2>NOMES GERADOS</h2>
+            <div id="resultados"></div>
+        </div>
+        </div>
     </div>
-
-    <form id="rtspForm">
-        <label for="usuario">Usuário:</label>
-        <input type="text" id="usuario" required>
-
-        <label for="senha">Senha:</label>
-        <input type="text" id="senha" required>
-
-        <label for="ip">IP:</label>
-        <input type="text" id="ip" required>
-
-        <label for="porta">Porta:</label>
-        <input type="text" id="porta" required>
-
-        <label for="canal">Número do Canal Inicial:</label>
-        <input type="text" id="canal" required>
-
-        <label for="numCanais">Número total de Canais:</label>
-        <input type="text" id="numCanais" required>
-
-        <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
-    </form>
-
-    <h2>RTSP's GERADOS</h2>
-    <div id="resultados"></div>
-
     <script src="/assets/js/hikvision.js"></script>
 </body>
 </html>
