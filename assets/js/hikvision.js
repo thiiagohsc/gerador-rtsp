@@ -12,7 +12,7 @@ function gerarURLsRTSP() {
     let canalInicial = parseInt(document.getElementById('canal').value, 10);
     let numCanais = parseInt(document.getElementById('numCanais').value, 10);
 
-    let resultadosRtspDiv = document.getElementById('resultados');
+    let resultadosRtspDiv = document.getElementById('resultadosRTSP');
     resultadosRtspDiv.innerHTML = '';
 
     for (let i = 0; i < numCanais; i++) {
@@ -25,7 +25,7 @@ function gerarURLsRTSP() {
 // Funções e metodos para Gerar Nomes
 
 function criarNomes(organizacao, unidade, equipamento, camera){
-    let nomegerado = `${organizacao}-${unidade}-${equipamento}-${camera}`;
+    let nomegerado = `${organizacao}-${unidade}-${equipamento}-CAM0${camera}`;
     return nomegerado;
 }
 
@@ -36,11 +36,11 @@ function gerarNomes() {
     let cameraInicial = document.querySelector("#camera").value;
     let numCameras = parseInt(document.querySelector("#numCameras").value);
 
-    let resultadosCamDiv = document.querySelector("resultados");
+    let resultadosCamDiv = document.querySelector("#resultadosCAM");
     resultadosCamDiv.innerHTML = "";
 
-    for(let i = 1; i < numCameras; i++) {
-        let camera = cameraInicial + i;
+    for(let i = 1; i <= numCameras; i++) {
+        let camera = cameraInicial++;
         let nomeCamera = criarNomes(organizacao, unidade, equipamento, camera);
         resultadosCamDiv.innerHTML += `<p>${nomeCamera}</p>`
     }
