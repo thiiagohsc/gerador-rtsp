@@ -33,13 +33,13 @@ function gerarNomes() {
     let organizacao = document.querySelector("#organizacao").value;
     let unidade = document.querySelector("#unidade").value;
     let equipamento = document.querySelector("#equipamento").value;
-    let cameraInicial = document.querySelector("#camera");
+    let cameraInicial = document.querySelector("#camera").value;
     let numCameras = parseInt(document.querySelector("#numCameras").value);
 
     let resultadosCamDiv = document.querySelector("resultados");
     resultadosCamDiv.innerHTML = "";
 
-    for(let i = 1; < numCameras; i++) {
+    for(let i = 1; i < numCameras; i++) {
         let camera = cameraInicial + i;
         let nomeCamera = criarNomes(organizacao, unidade, equipamento, camera);
         resultadosCamDiv.innerHTML += `<p>${nomeCamera}</p>`
