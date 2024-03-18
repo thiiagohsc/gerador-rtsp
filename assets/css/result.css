@@ -5,6 +5,7 @@ body {
     color: white;
 }
 
+/* CSS GLOBAL */ 
 .header {
     display: flex;
     align-items: center;
@@ -15,6 +16,13 @@ body {
     padding-right: 10px;
 }
 
+.flex{
+    display: flex;
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* CSS DO FORMULÁRIO DO RTSP */
 form {
     max-width: 400px;
     margin: 10px 0;
@@ -52,4 +60,9 @@ button:hover {
 #resultado {
     margin-top: 20px;
     color: #333;
+}
+
+/* CSS DO FORMULÁRIO DO NOME */ 
+.container-cam { 
+    margin-left: 100px;
 }
