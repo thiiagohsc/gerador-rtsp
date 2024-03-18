@@ -16,9 +16,9 @@ function gerarURLsRTSP() {
     resultadosRtspDiv.innerHTML = '';
 
     for (let i = 0; i < numCanais; i++) {
-        let canal = canalInicial + i;
+        let canal = canalInicial++;
         let urlRTSP = criarURLRTSP(usuario, senha, ip, porta, canal, 1);
-        resultadosRtspDiv.innerHTML += `<p>${urlRTSP}</p>`;
+        resultadosRtspDiv.innerHTML += `<span>${urlRTSP}</span>`;
     }
 }
 
@@ -42,7 +42,7 @@ function gerarNomes() {
     for(let i = 1; i <= numCameras; i++) {
         let camera = cameraInicial++;
         let nomeCamera = criarNomes(organizacao, unidade, equipamento, camera);
-        resultadosCamDiv.innerHTML += `<p>${nomeCamera}</p>`
+        resultadosCamDiv.innerHTML += `<span>${nomeCamera}</span><br>`
     }
 
 }
