@@ -42,12 +42,12 @@
 
         <div class="container-cam">
             <div class="header">
-            <h2>PREENCHA OS DA CÂMERA</h2>
+            <h2>PREENCHA OS DADOS DA CÂMERA</h2>
             </div>
 
             <form id="camForm">
-                <label for="organização">Organização:</label>
-                <input type="text" id="organização" required>
+                <label for="organizacao">Organização:</label>
+                <input type="text" id="organizacao" required>
 
                 <label for="unidade">Unidade:</label>
                 <input type="text" id="unidade" required>
@@ -55,14 +55,13 @@
                 <label for="equipamento">Equipamento:</label>
                 <input type="text" id="equipamento" required>
 
+                <label for="camera">Número da câmera inicial:</label>
+                <input type="text" id="camera" required>
 
-                <label for="canal">Número da câmera inicial:</label>
-                <input type="text" id="canal" required>
+                <label for="numCameras">Número total de câmeras:</label>
+                <input type="text" id="numCameras" required>
 
-                <label for="numCanais">Número total de câmeras:</label>
-                <input type="text" id="numCanais" required>
-
-                <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+                <button type="button" onclick="gerarNomes()">GERAR NOMES</button>
             </form>
 
             <h2>NOMES GERADOS</h2>
