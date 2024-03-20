@@ -1,23 +1,48 @@
-function criarURLRTSP(usuario, senha, ip, porta, stream, canal) {
+function criarUrlRtsp(usuario, senha, ip, porta, stream, canal) {
     let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/cam/realmonitor?channel=${canal}&subtype=${stream}`;
     return url;
 }
 
 function gerarURLsRTSP() {
-    let usuario = document.getElementById('usuario').value;
-    let senha = document.getElementById('senha').value;
-    let ip = document.getElementById('ip').value;
-    let porta = document.getElementById('porta').value;
-    let stream = document.getElementById('stream').value;
-    let canalInicial = parseInt(document.getElementById('canal').value, 10);
-    let numCanais = parseInt(document.getElementById('numCanais').value, 10);
+    let usuario = document.querySelector('#usuario').value;
+    let senha = document.querySelector('#senha').value;
+    let ip = document.querySelector('#ip').value;
+    let porta = document.querySelector('#porta').value;
+    let stream = document.querySelector('#stream').value;
+    let canalInicial = parseInt(document.querySelector('#canal').value);
+    let numCanais = parseInt(document.querySelector('#numCanais').value);
 
-    let resultadosDiv = document.getElementById('resultados');
-    resultadosDiv.innerHTML = '';
+    let resultadosRtspDiv = document.getElementById('resultadosRTSP');
+    resultadosRtspDiv.innerHTML = '';
 
     for (let i = 0; i < numCanais; i++) {
         let canal = canalInicial + i;
-        let urlRTSP = criarURLRTSP(usuario, senha, ip, porta, stream, canal);
-        resultadosDiv.innerHTML += `<span>${urlRTSP}</span><br>`;
+        let urlRTSP = criarUrlRtsp(usuario, senha, ip, porta, canal, 1);
+        resultadosRtspDiv.innerHTML += `<p>${urlRTSP}</p>`;
     }
+}
+
+// Funções e metodos para Gerar Nomes
+
+function criarNomes(organizacao, unidade, equipamento, camera){
+    let nomegerado = `${organizacao}-${unidade}-${equipamento}-CAM0${camera}`;
+    return nomegerado;
+}
+
+function gerarNomes() {
+    let organizacao = document.querySelector("#organizacao").value;
+    let unidade = document.querySelector("#unidade").value;
+    let equipamento = document.querySelector("#equipamento").value;
+    let cameraInicial = document.querySelector("#camera").value;
+    let numCameras = parseInt(document.querySelector("#numCameras").value);
+
+    let resultadosCamDiv = document.querySelector("#resultadosCAM");
+    resultadosCamDiv.innerHTML = "";
+
+    for(let i = 1; i <= numCameras; i++) {
+        let camera = cameraInicial++;
+        let nomeCamera = criarNomes(organizacao, unidade, equipamento, camera);
+        resultadosCamDiv.innerHTML += `<span>${nomeCamera}</span><br>`
+    }
+
 }
