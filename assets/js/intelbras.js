@@ -17,7 +17,7 @@ function gerarURLsRTSP() {
 
     for (let i = 0; i < numCanais; i++) {
         let canal = canalInicial + i;
-        let urlRTSP = criarUrlRtsp(usuario, senha, ip, porta, canal, 1);
+        let urlRTSP = criarUrlRtsp(usuario, senha, ip, porta, stream, canal);
         resultadosRtspDiv.innerHTML += `<span>${urlRTSP}</span><br>`;
     }
 }
