@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERADOR RTSP - INTELBRAS</title>
+    <link rel="stylesheet" href="/assets/css/result.css">
+</head>
+<body>
+    <a href="/index.html"><img src="/assets/images/icon-back.png" class="icon-home"></a>
+    <div class="flex">
+        <div class="container-rtsp">
+            <div class="header">
+                <h2>PREENCHA OS DADOS DA CÂMERA</h2>
+            </div>
+
+            <form id="rtspForm">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" required>
+
+                <label for="ip">IP:</label>
+                <input type="text" id="ip" required>
+
+                <label for="porta">Porta:</label>
+                <input type="text" id="porta" required>
+
+        <label for="stream">Stream:</label>
+        <input type="text" id="stream" required>
+
+                <label for="canal">Número do Canal Inicial:</label>
+                <input type="text" id="canal" required>
+
+                <label for="numCanais">Número total de Canais:</label>
+                <input type="text" id="numCanais" required>
+
+                <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+            </form>
+
+            <h2>RTSP's GERADOS</h2>
+            <div id="resultadosRTSP"></div>
+        </div>
+
+        <div class="container-cam">
+            <div class="header">
+            <h2>PREENCHA OS DADOS DA CÂMERA</h2>
+            </div>
+
+            <form id="camForm">
+                <label for="organizacao">Organização:</label>
+                <input type="text" id="organizacao" required>
+
+                <label for="unidade">Unidade:</label>
+                <input type="text" id="unidade" required>
+
+                <label for="equipamento">Equipamento:</label>
+                <span style="color: rgb(122, 122, 122); font-size: 12px;">ex: NVR01</span>
+                <input type="text" id="equipamento" required>
+
+                <label for="camera">Número da câmera inicial:</label>
+                <input type="text" id="camera" required>
+
+                <label for="numCameras">Número total de câmeras:</label>
+                <input type="text" id="numCameras" required>
+
+                <button type="button" onclick="gerarNomes()">GERAR NOMES</button>
+            </form>
+
+            <h2>NOMES GERADOS</h2>
+            <div id="resultadosCAM"></div>
+        </div>
+    <script src="/assets/js/lenovo.js"></script>
+</body>
+</html>
