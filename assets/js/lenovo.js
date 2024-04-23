@@ -8,7 +8,6 @@ function gerarURLsRTSP() {
     let senha = document.querySelector('#senha').value;
     let ip = document.querySelector('#ip').value;
     let porta = document.querySelector('#porta').value;
-    let stream = document.querySelector('#stream').value;
     let canalInicial = parseInt(document.querySelector('#canal').value);
     let numCanais = parseInt(document.querySelector('#numCanais').value);
 

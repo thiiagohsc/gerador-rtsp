@@ -1,5 +1,5 @@
 function criarUrlRtsp(usuario, senha, ip, porta, canal) {
-    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/live/ch00_${canal}`;
+    let url = `rtsp://${usuario}:${senha}@${ip}:${porta}/profile${canal}`;
     return url;
 }
 
@@ -8,7 +8,6 @@ function gerarURLsRTSP() {
     let senha = document.querySelector('#senha').value;
     let ip = document.querySelector('#ip').value;
     let porta = document.querySelector('#porta').value;
-    let stream = document.querySelector('#stream').value;
     let canalInicial = parseInt(document.querySelector('#canal').value);
     let numCanais = parseInt(document.querySelector('#numCanais').value);
 
