@@ -16,7 +16,7 @@ body {
     padding-right: 10px;
 }
 
-.flex{
+.flex {
     display: flex;
     flex: 1;
     padding-right: 20px;
@@ -30,14 +30,13 @@ input {
     border: none; 
     border-bottom: 2px solid #778da9; 
     background-color: transparent; 
-    color: white;
+    color: #ccc;
 }
 
 input:focus {
     outline: none; 
     border-bottom: 2px solid #e0e1dd;
 }
-
 
 /* CSS DO FORMULÁRIO DO RTSP */
 form {
@@ -53,17 +52,6 @@ label {
     display: block;
     margin: 10px 0 5px;
     color: #ccc; 
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    background-color: #444; 
-    color: #ccc;
-    border: 1px solid #555; 
-    border-radius: 3px;
 }
 
 button {
