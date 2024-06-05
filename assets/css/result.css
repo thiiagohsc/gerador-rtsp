@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #0d1b2a;
-    color: white;
+    background-color: #1e1e1e;
+    color: #ccc; 
 }
 
 /* CSS GLOBAL */ 
@@ -27,14 +27,15 @@ form {
     max-width: 400px;
     margin: 10px 0;
     padding: 20px;
-    border: 2px solid #778da9;
+    border: 2px solid #333; 
     border-radius: 5px;
-    background-color: #1b263b;
+    background-color: #333;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
+    color: #ccc; 
 }
 
 input {
@@ -42,24 +43,29 @@ input {
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    background-color: #444; 
+    color: #ccc;
+    border: 1px solid #555; 
+    border-radius: 3px;
 }
 
 button {
-    background-color: #e0e1dd;
-    color: black;
+    background-color: #ffcc00; 
+    color: #1e1e1e; 
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 button:hover {
-    background-color: #8ea9cc;
+    background-color: #ffdb4d;
 }
 
 #resultado {
     margin-top: 20px;
-    color: #333;
+    color: #ccc; 
 }
 
 /* CSS DO FORMULÁRIO DO NOME */ 

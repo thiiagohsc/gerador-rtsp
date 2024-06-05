@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #0d1b2a;
-    color: white;
+    background-color: #1e1e1e;
+    color: #fff; /* Texto branco */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 .logo {
     width: 450px;
     display: flex;
-    border: 3px solid rgb(162, 155, 165);
+    border: 3px solid #a29ba5; /* Cinza */
     margin-top: 30px;
     border-radius: 20px;
     padding: 15px;
@@ -32,11 +32,9 @@ body {
 }
 
 .logo:hover {
-    background-color: #1b263b;
+    background-color: #3c3f4150; 
 }
 
 .hikvision, .motorola, .lenovo, .intelbras {
     height: 85px;
 }
-
-
