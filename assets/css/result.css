@@ -22,6 +22,23 @@ body {
     padding-right: 20px;
 }
 
+input {
+    width: 100%;
+    padding: 8px 0; 
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 2px solid #778da9; 
+    background-color: transparent; 
+    color: white;
+}
+
+input:focus {
+    outline: none; 
+    border-bottom: 2px solid #e0e1dd;
+}
+
+
 /* CSS DO FORMULÁRIO DO RTSP */
 form {
     max-width: 400px;
