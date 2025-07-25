@@ -1,77 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GERADOR RTSP - HIKVISION</title>
-    <link rel="stylesheet" href="/assets/css/result.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador RTSP - Hikvision</title>
+    <link rel="stylesheet" href="/assets/css/result.css" />
 </head>
 <body>
-    <a href="/index.html"><img src="/assets/images/icon-back.png" class="icon-home"></a>
-    <div class="flex">
-        <div class="container-rtsp">
+    <a href="/index.html" aria-label="Voltar para a página inicial">
+        <img src="/assets/images/icon-back.png" class="icon-home" alt="Ícone de voltar para home" />
+    </a>
+
+    <main class="flex">
+        <!-- FORMULÁRIO RTSP -->
+        <section class="container-rtsp">
             <div class="header">
-                <h2>PREENCHA OS DADOS DA CÂMERA</h2>
+                <h2>Preencha os dados da câmera</h2>
             </div>
 
             <form id="rtspForm">
                 <label for="usuario">Usuário:</label>
-                <input type="text" id="usuario" required>
+                <input type="text" id="usuario" required />
 
                 <label for="senha">Senha:</label>
-                <input type="text" id="senha" required>
+                <input type="text" id="senha" required />
 
                 <label for="ip">IP:</label>
-                <input type="text" id="ip" required>
+                <input type="text" id="ip" required />
 
                 <label for="porta">Porta:</label>
-                <input type="text" id="porta" required>
+                <input type="text" id="porta" required />
 
-        <label for="stream">Stream:</label>
-        <input type="text" id="stream" required>
+                <label for="stream">Stream:</label>
+                <input type="text" id="stream" required />
 
                 <label for="canal">Número do Canal Inicial:</label>
-                <input type="text" id="canal" required>
+                <input type="text" id="canal" required />
 
                 <label for="numCanais">Número total de Canais:</label>
-                <input type="text" id="numCanais" required>
+                <input type="text" id="numCanais" required />
 
-                <button type="button" onclick="gerarURLsRTSP()">GERAR RTSP</button>
+                <button type="button" onclick="gerarURLsRTSP()">Gerar RTSP</button>
             </form>
 
-            <h2>RTSP's GERADOS</h2>
+            <h2>RTSPs Gerados</h2>
             <div id="resultadosRTSP"></div>
-        </div>
+        </section>
 
-        <div class="container-cam">
+        <!-- FORMULÁRIO NOMES -->
+        <section class="container-cam">
             <div class="header">
-            <h2>PREENCHA OS DADOS DA CÂMERA</h2>
+                <h2>Preencha os dados da câmera</h2>
             </div>
 
             <form id="camForm">
                 <label for="organizacao">Organização:</label>
-                
-                <input type="text" id="organizacao" required>
+                <input type="text" id="organizacao" required />
 
                 <label for="unidade">Unidade:</label>
-                <input type="text" id="unidade" required>
+                <input type="text" id="unidade" required />
 
                 <label for="equipamento">Equipamento:</label>
-                <span style="color: rgb(122, 122, 122); font-size: 12px;">ex: NVR01</span>
-                <input type="text" id="equipamento" required>
+                <span class="dica">ex: NVR01</span>
+                <input type="text" id="equipamento" required />
 
                 <label for="camera">Número da câmera inicial:</label>
-                <input type="text" id="camera" required>
+                <input type="text" id="camera" required />
 
                 <label for="numCameras">Número total de câmeras:</label>
-                <input type="text" id="numCameras" required>
+                <input type="text" id="numCameras" required />
 
-                <button type="button" onclick="gerarNomes()">GERAR NOMES</button>
+                <button type="button" onclick="gerarNomes()">Gerar Nomes</button>
             </form>
 
-            <h2>NOMES GERADOS</h2>
+            <h2>Nomes Gerados</h2>
             <div id="resultadosCAM"></div>
-        </div>
+        </section>
+    </main>
+
     <script src="/assets/js/hikvision.js"></script>
 </body>
 </html>

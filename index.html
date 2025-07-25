@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="stylesheet" href="/assets/css/home.css">
-    <title>GERADOR RTSP</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de RTSP</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
 </head>
 <body>
-    <div class="container_title">
-        <h1 class="title">GERADOR DE RTSP</h1>
-        <h2>SELECIONE O FABRICANTE DESEJADO</h2>
-    </div>
-    <div class="models">
-        <a href="./html/intelbras.html"><img src="/assets/images/logo-intelbras.png" class="logo intelbras"></a>
-        <a href="./html/hikvision.html"><img src="/assets/images/logo-hikvision.png" class="logo hikvision"></a>
-        <a href="./html/lenovo.html"><img src="/assets/images/logo-lenovo.png" class="logo lenovo"></a>
-        <a href="./html/motorola.html"><img src="/assets/images/logo-motorola.png" class="logo motorola"></a>
-    </div>
+    <header class="container-titulo">
+        <h1 class="titulo-principal">Gerador de RTSP</h1>
+        <h2 class="subtitulo">Selecione o fabricante desejado</h2>
+    </header>
+
+    <main class="fabricantes" aria-label="Lista de fabricantes disponíveis">
+        <a href="./html/intelbras.html" class="logo-wrapper" aria-label="Intelbras">
+            <img src="/assets/images/logo-intelbras.png" alt="Logo da Intelbras" class="logo" />
+        </a>
+        <a href="./html/hikvision.html" class="logo-wrapper" aria-label="Hikvision">
+            <img src="/assets/images/logo-hikvision.png" alt="Logo da Hikvision" class="logo" />
+        </a>
+        <a href="./html/lenovo.html" class="logo-wrapper" aria-label="Lenovo">
+            <img src="/assets/images/logo-lenovo.png" alt="Logo da Lenovo" class="logo" />
+        </a>
+        <a href="./html/motorola.html" class="logo-wrapper" aria-label="Motorola">
+            <img src="/assets/images/logo-motorola.png" alt="Logo da Motorola" class="logo" />
+        </a>
+    </main>
 </body>
 </html>

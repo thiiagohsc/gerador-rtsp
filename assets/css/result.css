@@ -1,79 +1,123 @@
+/* Reset e base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     background-color: #1e1e1e;
-    color: #ccc; 
+    color: #ccc;
+    padding: 20px;
 }
 
-/* CSS GLOBAL */ 
-.header {
-    display: flex;
-    align-items: center;
-}
-
+/* Ícone de voltar */
 .icon-home {
     width: 35px;
-    padding-right: 10px;
+    padding-bottom: 20px;
+    display: inline-block;
 }
 
+/* Layout principal dos dois blocos */
 .flex {
     display: flex;
-    flex: 1;
-    padding-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* força a mesma altura visual */
+    gap: 40px;
 }
 
-input {
-    width: 100%;
-    padding: 8px 0; 
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: none; 
-    border-bottom: 2px solid #778da9; 
-    background-color: transparent; 
-    color: #ccc;
+/* Cabeçalho */
+.header {
+    margin-bottom: 20px;
 }
 
-input:focus {
-    outline: none; 
-    border-bottom: 2px solid #e0e1dd;
-}
-
-/* CSS DO FORMULÁRIO DO RTSP */
+/* Estilo dos formulários */
 form {
-    max-width: 400px;
-    margin: 10px 0;
+    width: 100%;
     padding: 20px;
-    border: 2px solid #333; 
+    border: 2px solid #333;
     border-radius: 5px;
     background-color: #333;
+    flex: 1;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
-    color: #ccc; 
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: none;
+    border-bottom: 2px solid #778da9;
+    background-color: transparent;
+    color: #ccc;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #e0e1dd;
 }
 
 button {
-    background-color: #ffcc00; 
-    color: #1e1e1e; 
+    background-color: #ffcc00;
+    color: #1e1e1e;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #ffdb4d;
 }
 
-#resultado {
-    margin-top: 20px;
-    color: #ccc; 
+/* Containers dos blocos */
+.container-rtsp,
+.container-cam {
+    flex: 1;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-/* CSS DO FORMULÁRIO DO NOME */ 
-.container-cam { 
-    margin-left: 100px;
+/* Resultados formatados */
+#resultadosRTSP,
+#resultadosCAM {
+    flex: 1;
+    margin-top: 20px;
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    min-height: 150px;
+}
+
+/* Texto auxiliar */
+.dica {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-cam {
+        margin-top: 40px;
+    }
 }
