@@ -9,6 +9,10 @@ body {
     flex-direction: column;
 }
 
+.container_title {
+    text-align: center;
+}
+
 .title {
     width: 560px;
     padding-top: 60px;
