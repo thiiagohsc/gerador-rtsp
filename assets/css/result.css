@@ -31,8 +31,7 @@ body {
 }
 
 /* Caixa que envolve todo o formulário */
-.container-rtsp,
-.container-cam {
+.container-rtsp {
   flex: 1 1 360px;      /* cresce, encolhe, base 360px */
   background-color: #333;
   border-radius: 8px;
@@ -110,8 +109,7 @@ button:focus {
 }
 
 /* Área dos resultados */
-#resultadosRTSP,
-#resultadosCAM {
+#resultadosRTSP {
   margin-top: 20px;
   background-color: #2c2c2c;
   padding: 15px;
@@ -124,8 +122,7 @@ button:focus {
 }
 
 /* Títulos abaixo dos formulários */
-.container-rtsp > h2,
-.container-cam > h2 {
+.container-rtsp > h2 {
   margin-top: 25px;
   color: #eee;
   font-weight: 700;
@@ -140,8 +137,7 @@ button:focus {
     margin-left: 0;
   }
 
-  .container-rtsp,
-  .container-cam {
+  .container-rtsp {
     width: 100%;
     max-width: 480px;
     margin-bottom: 30px;

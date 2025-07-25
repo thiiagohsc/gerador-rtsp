@@ -46,36 +46,6 @@
             <h2>RTSPs Gerados</h2>
             <div id="resultadosRTSP"></div>
         </section>
-
-        <!-- FORMULÁRIO NOMES -->
-        <section class="container-cam">
-            <div class="header">
-                <h2>Preencha os dados da câmera</h2>
-            </div>
-
-            <form id="camForm">
-                <label for="organizacao">Organização:</label>
-                <input type="text" id="organizacao" required />
-
-                <label for="unidade">Unidade:</label>
-                <input type="text" id="unidade" required />
-
-                <label for="equipamento">Equipamento:</label>
-                <span class="dica">ex: NVR01</span>
-                <input type="text" id="equipamento" required />
-
-                <label for="camera">Número da câmera inicial:</label>
-                <input type="text" id="camera" required />
-
-                <label for="numCameras">Número total de câmeras:</label>
-                <input type="text" id="numCameras" required />
-
-                <button type="button" onclick="gerarNomes()">Gerar Nomes</button>
-            </form>
-
-            <h2>Nomes Gerados</h2>
-            <div id="resultadosCAM"></div>
-        </section>
     </main>
 
     <script src="/assets/js/hikvision.js"></script>
